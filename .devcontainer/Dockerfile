@@ -1,0 +1,13 @@
+FROM 107292555468.dkr.ecr.eu-central-1.amazonaws.com/spark/emr-6.2.0-20210129
+USER root
+
+RUN pip3 install --upgrade pip
+
+ENV AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXX
+ENV AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXXXXX
+ENV AWS_DEFAULT_REGION=eu-central-1
+ENV AWS_REGION=eu-central-1
+ENV AWS_GLUE_ENDPOINT=glue.eu-central-1.amazonaws.com
+ENV AWS_EC2_METADATA_DISABLED=true
+
+USER hadoop:hadoop
